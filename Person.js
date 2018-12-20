@@ -41,7 +41,7 @@ export default class Person {
                     this.returnLeg = false;
                 }
             } else {
-                if (this.degreeLeg < -45) {
+                if (this.degreeLeg < -25) {//ileri adım
                     this.returnLeg = true;
                 } else {
 
@@ -62,7 +62,7 @@ export default class Person {
         if (this.isWalking) {
             if (this.returnLeg) {
                 this.degreeLegLeft -= 1;
-                if (this.degreeLegLeft < -45) {
+                if (this.degreeLegLeft < -25) {
                     this.returnLegLeft = false;
                 }
             } else {

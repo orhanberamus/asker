@@ -28,10 +28,10 @@ export default class Person {
         this.context.fillRect(this.canvas.width - this.steps - 5, this.canvas.height - 120, 25, 5);
         this.context.save();// walkingRight
         this.context.translate(this.canvas.width - this.steps, this.canvas.height - 60);
-        if (this.isWalking) {
+        if (this.isWalking) {//bozuk
             if (this.returnLeg) {
                 this.degreeLeg += 1;
-                if (this.degreeLeg > 45) {
+                if (this.degreeLeg > 25) {
                     this.returnLeg = false;
                 }
             } else {
@@ -60,7 +60,7 @@ export default class Person {
                     this.returnLegLeft = false;
                 }
             } else {
-                if (this.degreeLegLeft > 45) {
+                if (this.degreeLegLeft > 25) {
                     this.returnLegLeft = true;
                 } else {
 
@@ -92,7 +92,7 @@ export default class Person {
         this.imgs[this.handIndex].height = 100;
         this.imgs[this.handIndex].widht = 100;
 
-        this.context.drawImage(this.imgs[this.handIndex], 0, -30, 20, 40);
+        this.context.drawImage(this.imgs[this.handIndex], 0, -40, 20, 40);
         this.context.drawImage(this.imgs[1], 0, -60, 20, 30);
         this.context.translate(-this.canvas.width + this.steps, -this.canvas.height + 40);
         this.context.restore()
